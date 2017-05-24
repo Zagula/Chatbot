@@ -1,0 +1,97 @@
+@keyframes addMessage {
+    from {
+        top: 1em;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.chatbot {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+    border-radius: 4px;
+}
+.mainWindow {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ccc;
+    background: #fafafa;
+}
+.mainWindow .content {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    transition: all 0.4s;
+}
+.mainWindow .bot,
+.mainWindow .human {
+    width: 90%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    text-align: left;
+    border: 1px solid #ccc;
+    position: relative;
+    animation: addMessage 0.8s;
+}
+.mainWindow .bot .timespan,
+.mainWindow .human .timespan {
+    font-size: 10px;
+    background: #fff;
+    padding: 2px 10px;
+    position: absolute;
+    right: 20px;
+    top: -5px;
+    border: 1px solid #ccc;
+}
+.mainWindow .bot {
+    background: #fff;
+}
+.mainWindow .human {
+    background: #adf;
+    margin-left: 10%;
+}
+.mainInput {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    position: relative;
+}
+.inputField {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 65px 10px 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.inputButton {
+    position: absolute;
+    right: 5px;
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #aaa;
+    background: #fff;
+    top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.inputButton:hover {
+    cursor: pointer;
+    color: #fff;
+    background: #aaa;
+}
